@@ -1,0 +1,10 @@
+
+services:
+    customer-api:
+      image: customer-api
+      build: .
+      ports:
+        - "8080:8080"  # or "8081:8081" if you uncomment server.port
+      environment:
+        - JAVA_OPTS=
+      restart: unless-stopped
